@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-gatus-trigger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "n8n community node for receiving webhook alerts from Gatus",
   "keywords": [
     "n8n-community-node-package",
@@ -31,6 +31,7 @@
     "format": "prettier nodes --write",
     "lint": "eslint 'nodes/**/*.ts' package.json",
     "lintfix": "eslint 'nodes/**/*.ts' package.json --fix",
+    "test": "npm run lint",
     "prepublishOnly": "npm run build && npm run lint"
   },
   "files": [
