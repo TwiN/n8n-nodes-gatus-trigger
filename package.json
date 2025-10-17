@@ -1,0 +1,54 @@
+{
+  "name": "n8n-nodes-gatus-trigger",
+  "version": "1.0.0",
+  "description": "n8n community node for receiving webhook alerts from Gatus",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "gatus",
+    "monitoring",
+    "webhook",
+    "trigger",
+    "alerts"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/TwiN/n8n-nodes-gatus-trigger",
+  "author": {
+    "name": "TwiN",
+    "url": "https://twin.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TwiN/n8n-nodes-gatus-trigger.git"
+  },
+  "engines": {
+    "node": ">=20.15"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes --write",
+    "lint": "eslint 'nodes/**/*.ts' package.json",
+    "lintfix": "eslint 'nodes/**/*.ts' package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "nodes": [
+      "dist/nodes/GatusTrigger/GatusTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "~8.32.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "gulp": "^5.0.0",
+    "n8n-workflow": "^1.0.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.0.0"
+  }
+}
