@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-gatus-trigger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "n8n community node for receiving webhook alerts from Gatus",
   "keywords": [
     "n8n-community-node-package",
@@ -15,6 +15,7 @@
   "homepage": "https://github.com/TwiN/n8n-nodes-gatus-trigger",
   "author": {
     "name": "TwiN",
+    "email": "twin@linux.com",
     "url": "https://twin.sh"
   },
   "repository": {
