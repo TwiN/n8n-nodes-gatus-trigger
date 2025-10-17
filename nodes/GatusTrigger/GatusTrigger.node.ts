@@ -28,7 +28,7 @@ export class GatusTrigger implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Gatus Trigger',
 		name: 'gatusTrigger',
-		icon: 'file:gatus.png',
+		icon: 'file:gatus.svg',
 		group: ['trigger'],
 		version: 1,
 		description: 'Receives webhook alerts from Gatus monitoring system',
