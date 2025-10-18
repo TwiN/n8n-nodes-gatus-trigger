@@ -1,5 +1,5 @@
 # n8n-nodes-gatus-trigger
-[npm package](https://www.npmjs.com/package/n8n-nodes-gatus-trigger)
+[![npm package version](https://img.shields.io/npm/v/n8n-nodes-gatus-trigger)](https://www.npmjs.com/package/n8n-nodes-gatus-trigger)
 
 This is a n8n community node that lets you receive webhook alerts from [Gatus](https://github.com/TwiN/gatus), a developer-oriented health monitoring and status page system.
 
