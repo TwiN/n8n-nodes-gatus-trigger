@@ -1,6 +1,7 @@
 # n8n-nodes-gatus-trigger
+[npm package](https://www.npmjs.com/package/n8n-nodes-gatus-trigger)
 
-This is an n8n community node that lets you receive webhook alerts from [Gatus](https://github.com/TwiN/gatus), a developer-oriented health monitoring and status page system.
+This is a n8n community node that lets you receive webhook alerts from [Gatus](https://github.com/TwiN/gatus), a developer-oriented health monitoring and status page system.
 
 
 ## Installation
@@ -13,37 +14,30 @@ npm install n8n-nodes-gatus-trigger
 ```
 
 ### n8n Cloud
-
 For n8n cloud users, follow the [n8n Cloud installation guide](https://docs.n8n.io/integrations/community-nodes/installation/gui-install/).
 
 ## Operations
-
 This node provides a single trigger operation:
 
 - **Webhook Trigger**: Receives HTTP POST webhooks from Gatus when alerts are triggered or resolved
 
 ## Configuring Gatus
-
 To send alerts to this n8n trigger node, configure Gatus to use the n8n alerting provider:
 
 ### 1. Get Your Webhook URL
-
 After adding the Gatus Trigger node to your n8n workflow:
 1. Click "Listen for Test Event" to get the test webhook URL
 2. Once your workflow is activated, use the Production webhook URL
 
 ### 2. Configure Gatus
-
 Add the following to your Gatus configuration file (`config.yaml`):
 
 ```yaml
 alerting:
   n8n:
     webhook-url: "https://your-n8n-instance.com/webhook/your-webhook-path"
-
   default-alert:
-    enabled: true
-    send-on-resolved: true
+    send-on-resolved: true 
 
 endpoints:
   - name: example-api
@@ -57,7 +51,6 @@ endpoints:
 ```
 
 ### Gatus Webhook Payload Structure
-
 Gatus automatically sends webhooks with the following JSON structure (based on the [official n8n provider implementation](https://github.com/TwiN/gatus/blob/master/alerting/provider/n8n/n8n.go)):
 
 - `title`: Title of the alert (configurable in Gatus, defaults to "Gatus")
